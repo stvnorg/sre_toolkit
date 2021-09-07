@@ -1,9 +1,12 @@
 from fastapi import FastAPI
-from routers import net
+from prometheus_fastapi_instrumentator import Instrumentator
+from routers import tools
 
 app = FastAPI()
 
-app.include_router(net.router)
+app.include_router(tools.router)
+
+Instrumentator().instrument(app).expose(app)
 
 @app.get("/")
 def read_root():
