@@ -10,4 +10,4 @@ Instrumentator().instrument(app).expose(app)
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"name": "sre-toolkit"}
