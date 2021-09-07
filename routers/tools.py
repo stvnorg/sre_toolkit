@@ -15,10 +15,10 @@ def tools_index():
 
 @router.get("/tools/password-generator", tags=["tools"])
 def tools_password_generator():
-    return {"generated_password": generate_password()}
+    return generate_password()
 
 @router.get("/tools/epoch-to-utc/{epoch_time}", tags=["tools"])
 def tools_epoch_to_utc(epoch_time: Optional[int] = None):
     if epoch_time:
-        return {"UTC Time": epoch_to_utc(epoch_time)}
-    return {"epoch_to_utc": "convert epoch time to utc"}
+        return epoch_to_utc(epoch_time)
+    return "convert epoch time to utc"

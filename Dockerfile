@@ -4,7 +4,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 COPY *.py /app/
-COPY libs/*.py /app/libs/
+COPY tools/*.py /app/tools/
 COPY routers/*.py /app/routers/
 
 RUN apk add build-base
