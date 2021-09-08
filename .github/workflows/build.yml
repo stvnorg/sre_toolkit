@@ -1,0 +1,28 @@
+name: Build
+
+on:
+  push:
+    branches: '*'
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install required modules
+      run: pip install -r requirements.txt
+
+    - name: Linter
+      run: pylint ./*.py
+
+    - name: Unit Test
+      run: pytest test/
