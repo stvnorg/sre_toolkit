@@ -34,7 +34,7 @@ $ uvicorn main:app --reload
 You can also run it directly in docker
 
 ```bash
-$ docker run -p 8000:8000 -d s7even/sre-toolkit:0.0.1
+$ docker run -p 8000:8000 -d s7even/sre-toolkit:0.0.2
 ```
 
 ##### docker-compose
@@ -54,7 +54,7 @@ image:
   repository: s7even/sre-toolkit
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.0.1"
+  tag: "0.0.2"
 
 env_vars:
   APP_NAME: "zype-demo"
