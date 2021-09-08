@@ -45,6 +45,8 @@ Or using docker-compose
 docker-compose up -d
 ```
 
+Note: As default it will listen on Port 8000 `http://localhost:8000/`
+
 #### Kubernetes (Helm) Installation
 
 This project contain the helm chart for you to install it in kubernetes. Create a new file inside the `helm` directory of this repo (example: `demo-values.yaml`) and fill it up with below values
@@ -93,4 +95,6 @@ To see all the details of the endpoints you can access the `swagger` endpoint on
 
 #### Monitoring
 
-It has Prometheus monitoring enabled exposed on endpoint `http://<API_URL>/docs`
+It has Prometheus monitoring enabled exposed on endpoint `http://<API_URL>/metrics`
+Some of the list of metrics that can be scrapped is in this [link](https://pypi.org/project/prometheus-fastapi-instrumentator/)
+
