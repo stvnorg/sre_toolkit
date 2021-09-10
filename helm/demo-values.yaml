@@ -1,0 +1,10 @@
+image:
+  repository: s7even/sre-toolkit
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "0.0.2"
+
+env_vars:
+  APP_NAME: "zype-demo"
+  DEPLOY_ENV: "demo"
+  AUTHOR: "my-email@gmail.com"
